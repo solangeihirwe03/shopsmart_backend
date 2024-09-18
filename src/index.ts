@@ -2,6 +2,7 @@ import express, {Response, Request} from "express";
 import cors from "cors"
 import httpStatus from "http-status";
 import dotenv from "dotenv"
+import "./database/database"
 
 dotenv.config()
 const app = express();
