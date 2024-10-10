@@ -9,12 +9,12 @@ const getAllUsers = async()=>{
     return await user.find()
 }
 
-const getOneUser = async(email: string)=>{
+const getUserByEmail = async(email: string)=>{
     return await user.findOne({email})
 }
 
 export default {
     createUser,
     getAllUsers,
-    getOneUser
+    getUserByEmail
 }
