@@ -2,7 +2,6 @@ import express, {Response, Request} from "express";
 import cors from "cors"
 import httpStatus from "http-status";
 import dotenv from "dotenv"
-import router from "./router/userRoutes";
 import "./database/config/db.config"
 
 dotenv.config()
@@ -16,8 +15,6 @@ app.get("/", (req: Request, res: Response)=> {
         message: "Welcome to our shopsmart backend"
     })
 })
-
-app.use("/api", router)
 
 const port = process.env.PORT || 9090
 

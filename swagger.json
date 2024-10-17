@@ -1,0 +1,100 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "shopsmart",
+        "description": "APIs for the Shopsmart",
+        "termsOfServices": "https://github.com/solangeihirwe03/shopsmart_backend.git",
+        "contact": {
+            "email": "solangeihirwe@gmail.com"
+        },
+        "license": {
+            "name": "ISC"
+        }
+    },
+    "host": "localhost:5000",
+    "host-live": "https://shopsmart-backend-d4fw.onrender.com",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "Initial Route",
+            "description": "Initial/ Fake Endpoint | GET Route"
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "components": {
+        "schemas": {
+            "Users": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "integer",
+                        "nullable": true
+                    },
+                    "profilePicture": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "enum": [
+                            "male",
+                            "female"
+                        ],
+                        "nullable": true
+                    },
+                    "birthDate": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true
+                    },
+                    "currency": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "role": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "isVerified": {
+                        "type": "boolean"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            }
+        }
+    }
+}
