@@ -8,10 +8,11 @@ const hashPassword = (password: string)=>{
     return bcrypt.hashSync(password, 10)
 }
 
-// const generateToken = (id: string)=>{
-//     return jwt.sign({id}, process.env.JWT_SECRET)
-// }
+const generateToken = (id: string)=>{
+    return jwt.sign({id}, process.env.JWT_SECRET || "trust")
+}
 
 export {
-    hashPassword
+    hashPassword,
+    generateToken
 }

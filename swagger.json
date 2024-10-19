@@ -12,7 +12,7 @@
             "name": "ISC"
         }
     },
-    "host": "localhost:5000",
+    "host": "localhost:7070",
     "host-live": "https://shopsmart-backend-d4fw.onrender.com",
     "basePath": "/api",
     "tags": [
@@ -92,6 +92,29 @@
                     "updatedAt": {
                         "type": "string",
                         "format": "date-time"
+                    }
+                }
+            }
+        },
+        "securitySchemes":{
+            "bearerAuth":{
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    },
+    "paths":{
+        "/": {
+            "get": {
+                "tags":[
+                    "Initial Route"
+                ],
+                "summary": "Handle Initial / Wrong GET Route",
+                "description": "By using the initial/ Wrong GET endpoint, you will see welcome message( Welcome to shopsmart)",
+                "response":{
+                    "200": {
+                        "description": "Success. (Welcome to Shopsmart.)"
                     }
                 }
             }

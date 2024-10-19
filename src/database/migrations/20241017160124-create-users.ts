@@ -4,13 +4,13 @@ export default{
   up: async(queryInterface: QueryInterface)=>{
     await queryInterface.createTable("users", {
       id:{
-        type: DataTypes.UUID,
+        type: new DataTypes.UUID,
         allowNull: false,
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true
       },
       firstName:{
-        type: DataTypes.STRING(128),
+        type: new DataTypes.STRING(128),
         allowNull: true
       },
       lastName: {
@@ -30,38 +30,38 @@ export default{
         allowNull: true
       },
       profilePicture:{
-        type: DataTypes.STRING(128),
+        type: new DataTypes.STRING(128),
         allowNull: true
       },
       gender:{
-        type: DataTypes.ENUM("male", "female"),
+        type: new DataTypes.ENUM("male", "female"),
         allowNull: true
       },
       birthDate:{
-        type: DataTypes.DATE(),
+        type: new DataTypes.DATE(),
         allowNull: true
       },
       currency:{
-        type: DataTypes.STRING(128),
+        type: new DataTypes.STRING(128),
         allowNull: true
       },
       role:{
-        type: DataTypes.STRING(128),
+        type: new DataTypes.STRING(128),
         allowNull: true
       },
       isVerified:{
-        type: DataTypes.BOOLEAN(),
+        type: new DataTypes.BOOLEAN(),
         allowNull: true,
         defaultValue: false
       },
       createdAt:{
         allowNull:false,
-        type: DataTypes.DATE,
+        type: new DataTypes.DATE,
         defaultValue: DataTypes.NOW
       },
       updatedAt:{
         allowNull:false,
-        type: DataTypes.DATE,
+        type: new DataTypes.DATE,
         defaultValue: DataTypes.NOW
       }
     })

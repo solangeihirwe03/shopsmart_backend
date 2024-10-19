@@ -1,6 +1,6 @@
 import { Model, DataTypes, Optional } from "sequelize";
 import sequelizeConnection from "../config/db.config";
-import { hashPassword } from "src/helpers";
+import { hashPassword } from "../../helpers/index";
 
 export interface userAttributes {
     id: string;
@@ -127,3 +127,5 @@ Users.init(
         }
     }
 )
+
+export default Users
